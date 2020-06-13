@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
-public class HashMapTest {
+class HashMapTest {
 
     private static MyHashMap myHashMap;
 
@@ -73,7 +73,7 @@ public class HashMapTest {
 
     @ParameterizedTest
     @MethodSource(value = "hashMapProvider")
-    public void getSizeOfEmptyHashMap(MyHashMap myHashMap) {
+    void getSizeOfEmptyHashMap(MyHashMap myHashMap) {
         Assertions.assertEquals(0, myHashMap.size());
     }
 
