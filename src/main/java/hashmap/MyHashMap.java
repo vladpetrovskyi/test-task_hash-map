@@ -11,21 +11,21 @@ public class MyHashMap {
     private Node[] nodesArray;
 
     public MyHashMap() {
+        loadFactor = DEFAULT_LOAD_FACTOR;
         nodesArray = new Node[DEFAULT_CAPACITY];
         arrayCapacity = DEFAULT_CAPACITY;
-        loadFactor = DEFAULT_LOAD_FACTOR;
     }
 
     public MyHashMap(int capacity) {
+        loadFactor = DEFAULT_LOAD_FACTOR;
         nodesArray = new Node[capacity];
         arrayCapacity = capacity;
-        loadFactor = DEFAULT_LOAD_FACTOR;
     }
 
     public MyHashMap(int capacity, float loadFactor) {
+        this.loadFactor = loadFactor;
         nodesArray = new Node[capacity];
         arrayCapacity = capacity;
-        this.loadFactor = loadFactor;
     }
 
     public void put(int key, long value) {
