@@ -1,0 +1,13 @@
+language: java
+jdk:
+  - openjdk11
+script:
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=vladpetrovskyi_test-task_hash-map
+cache:
+  directories:
+    - $HOME/.m2
+addons:
+  sonarcloud:
+    organization: "vladpetrovskyi"
+    token:
+      secure: "hV7eoiq7satf465mLE6X+pRzqqGYjI24P9OnxB2tub4AcZK5sJMub6+XRasOafjsQeZS5iMqM9PHAuTTasBq9wATYFWBvZMuE0SB2pUy0FNe5BftAJ8Gc8mTsg0yfH3Y/Zxn+3ANJU4kykMNk3xPXH5gNW4DpWE0N/AunS142bOUiVLHhugwNsM0A8s/M67SpnXM9epINc+UWNw+4UZgQ+2L4NEjqmKrxf2pawdvwRcB59mEXbz7iynt+Z7P6zmRMq8amytcOSsQlRJYA4HA2g62YbO8Lv7Wuw40x+UAgs7cJrp9xHlBnJbgVOT5J9ejg1gZVS7kxJKDCFj9I6bC2AOsb4fqTDtf4I8uuZ2byJt4I0bdV3pQCxt9AyErAchYuhvC5f7TsjD7HyQYef/XgXIMk3my2Kcq98RgdjrV/8g51UsSoLq2iQRFEiuD+eUx1XOo0soiPs3QfvXkgdZkMqNoucxZ5WYMA5irUTShOB2XvoYCBi0CEkZGLP3t8UO7UAF9zYqo4PtVkuXkTjhOnzb989Hp3RuYt3wAJYhxBPuvjDpZVDBn8CtyJLrqTbiTBZlsqTVxVAbljbYuHIXFYBbpD2QLm6SQnlxF/jfUDD/7bTIxxtWSDueBt46qMdUF/Ykvny7CiQ0jYbrMeCZG6I4n2pNC3Uxnhc+JWoOoT+Q="
